@@ -1,11 +1,12 @@
 def sum_of_products(list1,list2):
+
     if len(usr1_list) != len(usr2_list):
         return "Are these the same length?"
     
     listsum = 0 
 
-for i in range(len(usr2_list)): 
-    listsum += usr1_list[i] * usr2_list[i]
+    for i in range(len(usr2_list)): 
+        listsum += usr1_list[i] * usr2_list[i]
     return listsum 
 
 if __name__ == '__main__':
