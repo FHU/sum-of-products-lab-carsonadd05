@@ -1,22 +1,19 @@
-def sum_of_products(list1, list2):
-    if len(list1) != len(list2):
-        return "Error: Lists must be the same length."
+def sum_of_products(list1,list2):
+    if len(usr1_list) != len(usr2_list):
+        return "Are these the same length?"
+    
+    listsum = 0 
 
-    result = sum(x * y for x, y in zip(list1, list2))
-    return result
+for i in range(len(usr2_list)): 
+    listsum += usr1_list[i] * usr2_list[i]
+    return listsum 
 
-def get_integer_list(prompt):
-    while True:
-        try:
-            integer_list = [int(x) for x in input(prompt)]
-            return integer_list
-        except ValueError:
-            print("Error: Please enter integers only.")
+if __name__ == '__main__':
+    usr1_list = input().split()
+    usr2_list = input().split()
 
-# Test the function
-list1 = get_integer_list("Enter the first series of integers: ")
-list2 = get_integer_list("Enter the second series of integers: ")
+    usr1_list = [int(num) for num in usr1_list]
+    usr2_list = [int(num) for num in usr2_list]
 
-output = sum_of_products(list1, list2)
-print("Output =", output)
-
+    SumofLists = sum_of_products(usr1_list, usr2_list)
+    print(SumofLists)
